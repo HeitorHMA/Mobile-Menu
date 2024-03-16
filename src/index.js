@@ -13,13 +13,14 @@
     openButton.innerHTML= "";
     openButton.innerHTML= "-";
         }}
-    else if (isOpen == true){
+    else {
             isOpen = false;
-            const gridDiv = document.querySelector("#mobileMenu")
+            const gridDiv = document.querySelector("#mobilemenu")
             const elements = document.querySelectorAll(".element-div")
             elements.forEach((function(element){
-                const parent = element.parentElement;
-                gridDiv.removeChild(parent)
+                gridDiv.removeChild(element)
+    openButton.innerHTML= "";
+    openButton.innerHTML = "+";
             }))}})}
  
  openMenu()
