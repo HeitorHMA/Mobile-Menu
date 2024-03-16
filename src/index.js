@@ -1,9 +1,25 @@
  function openMenu(){
+    let isOpen = false;
     const openButton = document.querySelector("#mobileOpen");
     openButton.addEventListener("click", function(){
-        const mobileMenu = document.querySelector("#mobilemen");
-        mobileMenu.classList.remove("hiding");
-        document.getElementById("mobileOpen").style.display = "none"
-    })
- }
+    if(isOpen == false){
+        isOpen=true;
+        for(let i=0;i<6;i++){
+        const mobileMenu = document.querySelector("#mobilemenu");
+        const menuButton1 = document.createElement("div");
+        menuButton1.classList.add("element-div");
+        menuButton1.innerHTML = '<button class="label-btn">Test Link</button> <button class ="icon-btn">T1</button>';
+        mobileMenu.appendChild(menuButton1);
+    openButton.innerHTML= "";
+    openButton.innerHTML= "-";
+        }}
+    else if (isOpen == true){
+            isOpen = false;
+            const gridDiv = document.querySelector("#mobileMenu")
+            const elements = document.querySelectorAll(".element-div")
+            elements.forEach((function(element){
+                const parent = element.parentElement;
+                gridDiv.removeChild(parent)
+            }))}})}
+ 
  openMenu()

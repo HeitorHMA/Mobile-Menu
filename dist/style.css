@@ -6,10 +6,29 @@ body{
     margin: 0;
     padding: 0px;
 }
-#mobileOpen{
+.mobile-menu-grid{
+    width: 40%;
+    height: 80%;
     position: fixed;
-    left: 95%;
-    top: 90%;
+    left: 60%;
+    top: 30%;
+    margin: none;
+    display: grid;
+    grid-template-rows: 6fr 2fr;
+    
+}
+#mobilemenu{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    
+}
+
+#mobileOpen{
+    margin-left: 90%;
+    grid-row-start: 2;
     margin: none;
     color: white;
     background-color: green;
@@ -30,5 +49,30 @@ body{
     color: rgb(196, 193, 193);
     background-color: rgb(2, 92, 9);
     cursor: pointer;
+}
+.label-btn{
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(199, 199, 199);
+    padding: 10px;
+    font-weight: 900;
+}
+.icon-btn{
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-weight: 900;
+    color: white;
+    background-color: green;
+    font-size: 24px;
+}
+.element-div{
+    margin-right: 1%;
+    margin-left: 60%;
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    align-items: center;
 }
 
